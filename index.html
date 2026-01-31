@@ -1,224 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamora</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gamora</title>
 
 <style>
-    body{
-        background-image:url(9725926-dark-gamer-4k-pc-wallpaper.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        overflow-x: hidden;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+body{
+    background-image:url(9725926-dark-gamer-4k-pc-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    overflow-x: hidden;
+}
 
-    header {
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0px 4px 10px rgb(59, 49, 139);
-    }
+/* HEADER */
+header {
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgb(59, 49, 139);
+}
 
-    nav a {
-      margin: 0 15px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      text-decoration: none;
-    }
+nav a {
+  margin: 0 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
 
-    nav a:hover { 
-      color: rgb(47, 46, 150);
-      text-shadow: 0 0 10px rgb(87, 87, 224);
-    }
+nav a:hover { 
+  color: rgb(47, 46, 150);
+  text-shadow: 0 0 10px rgb(87, 87, 224);
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px 20px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+}
+.hero h1 {
+  font-size: 70px;
+  color: cyan;
+  text-shadow: 0 0 20px black, 0 0 40px cyan;
+  margin: 0;
+}
+.hero p {
+  font-size: 22px;
+  color: #ddd;
+  text-shadow: 0 0 5px black;
+  margin-top: 15px;
+}
 
-    .hero h1 {
-      font-size: 70px;
-      color: cyan;
-      text-shadow: 0 0 20px black, 0 0 40px cyan;
-      margin: 0;
-    }
+/* SLIDER */
+.slides {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  animation: slide 30s linear infinite;
+}
 
-    .hero p {
-      font-size: 22px;
-      color: #ddd;
-      text-shadow: 0 0 5px black;
-      margin-top: 15px;
-    }
+.slide-item {
+  transition: transform 0.3s;
+}
+.slide-item img {
+  height: 250px;
+  border-radius: 20px;
+  margin: 100px 15px 0 15px;
+  box-shadow: 0px 4px 10px rgb(59, 49, 139);
+}
+.slide-item:hover{
+  transform: scale(1.10);
+}
 
-   .slides {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 100px;
-      animation: slide 30s linear infinite;
-      flex-wrap: nowrap;
-   }
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
 
-   .slide-item {
-      transition: transform 0.3s;
-      text-align: center;
-   }
+.slide-item span {
+  font-size: 22px;
+  font-family:'Times New Roman', Times, serif;
+  color: azure;
+  text-shadow: 1px 1px 5px rgb(99, 55, 180);
+  padding: 20px 0px 0px 170px;
+}
 
-   .slide-item img {
-      height: 250px;
-      border-radius: 20px;
-      margin: 100px 15px 0 15px;
-      box-shadow: 0px 4px 10px rgb(59, 49, 139);
-   }
+/* TABLE */
+table {
+  width: 60%;
+  color: rgb(182, 180, 195);
+  box-shadow: 0px 0px 20px rgb(59, 49, 139);
+  margin:0px auto;
+}
+th, td {
+  border: 5px solid rgb(181, 158, 215);
+  padding: 10px;
+}
 
-   .slide-item:hover{
-        transform: scale(1.10);
-   }
+/* HEADINGS */
+h2{
+ font-size: 35px;
+ margin-top: 300px;
+ color: aliceblue;
+ text-shadow: 1px 1px 5px rgb(99, 55, 180);
+ text-align: center;
+}
 
-   @keyframes slide {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); } 
-   }
+/* FORM */
+form {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #4e4e53;
+  box-shadow: 0px 10px 20px rgb(95, 57, 183);
+  border-radius: 10px;
+}
+input, button, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  background: rgb(222, 225, 225);
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: rgb(196, 103, 243); }
 
-   .slide-item span {
-        font-size: 22px;
-        font-family:'Times New Roman', Times, serif;
-        color: azure;
-        text-shadow: 1px 1px 5px rgb(99, 55, 180);
-        display: block;
-        margin-top: 10px;
-   }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: rgba(0,0,0,0.8);
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid cyan;
+}
 
-    table {
-      width: 60%;
-      color: rgb(182, 180, 195);
-      box-shadow: 0px 0px 20px rgb(59, 49, 139);
-      margin: 0 auto;
-      border-collapse: collapse;
-    }
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
 
-    th, td {
-      border: 5px solid rgb(181, 158, 215);
-      padding: 10px;
-      text-align: center;
-    }
+  body { background-attachment: scroll; }
 
-    h2{
-      font-size: 35px;
-      margin-top: 300px;
-      color: aliceblue;
-      text-shadow: 1px 1px 5px rgb(99, 55, 180);
-      text-align: center;
-    }
+  header { padding: 15px; }
 
-    form {
-      width: 300px; 
-      margin: 20px auto;
-      padding: 20px; 
-      background: #4e4e53;
-      box-shadow: 0px 10px 20px rgb(95, 57, 183);
-      border-radius: 10px;
-    }
+  /* NAVBAR HORIZONTAL ON PHONE */
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+  nav a {
+    margin: 0;
+    font-size: 14px;
+    padding: 6px 8px;
+  }
 
-    input, button, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
-    }
+  .hero {
+    padding: 60px 15px 30px 15px;
+  }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 16px; }
 
-    button {
-      background: rgb(222, 225, 225); 
-      font-weight: bold; 
-      cursor: pointer;
-    }
+  /* SLIDER FIX */
+  .slides {
+    flex-wrap: wrap;
+    animation: none;
+    margin-bottom: 40px;
+  }
+  .slide-item img {
+    height: 180px;
+    margin: 20px 10px;
+  }
+  .slide-item span {
+    display: block;
+    text-align: center;
+    padding: 10px 0 0 0;
+    font-size: 16px;
+  }
 
-    button:hover { background: rgb(196, 103, 243); }
+  /* TABLE */
+  table {
+    width: 95%;
+    font-size: 14px;
+  }
+  th, td { padding: 6px; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: rgba(0,0,0,0.8);
-      font-size: 14px;
-      color: #aaa;
-      border-top: 1px solid cyan;
-    }
+  /* FORM */
+  form { width: 90%; }
 
-    /* ================= MOBILE PORTRAIT ================= */
-    @media (max-width: 768px) and (orientation: portrait) {
-      body { background-attachment: scroll; }
+  h2 {
+    margin-top: 120px;
+    font-size: 26px;
+  }
 
-      .hero { padding: 60px 15px 30px 15px; }
-      .hero h1 { font-size: 36px; }
-      .hero p { font-size: 16px; }
-
-      nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 16px;
-      }
-
-      .slides {
-        flex-wrap: wrap;
-        animation: none;
-        margin-bottom: 40px;
-      }
-
-      .slide-item img {
-        height: 170px;
-        margin: 20px 10px;
-      }
-
-      .slide-item span {
-        font-size: 15px;
-      }
-
-      table { width: 95%; font-size: 14px; }
-      form { width: 90%; }
-
-      h2 { margin-top: 120px; font-size: 26px; }
-    }
-
-    /* ================= MOBILE LANDSCAPE ================= */
-    @media (max-width: 900px) and (orientation: landscape) {
-
-      .hero { padding: 40px 10px 20px 10px; }
-      .hero h1 { font-size: 40px; }
-      .hero p { font-size: 18px; }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        margin: 5px 12px;
-        font-size: 16px;
-      }
-
-      .slides {
-        animation: none;
-        flex-wrap: wrap;
-      }
-
-      .slide-item img {
-        height: 150px;
-        margin: 15px;
-      }
-
-      table { width: 85%; font-size: 14px; }
-      form { width: 70%; }
-
-      h2 { margin-top: 100px; font-size: 24px; }
-    }
-
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
 </style>
 </head>
 
@@ -260,7 +246,7 @@
     <span>Red Dead Redemption 2</span>
   </div>
   <div class="slide-item">
-    <img src="blackmy.jpeg" alt="BlackMythWukong">
+    <img src="blackmy.jpeg" alt="Black Myth: Wukong">
     <span>Black Myth: Wukong</span>
   </div>
 </div>
@@ -293,7 +279,8 @@
 </div>
 
 <footer>
-  © 2025 Gamora.com | Powered by Gaming Passion
+  © 2025 Gamora.com | Powered by Gaming Passion  
+  <p>Built by Anand Shankar</p>
 </footer>
 
 </body>
