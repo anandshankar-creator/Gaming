@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Carousel</title>
+<style>
+    /* BODY STYLING */
+    body {
+        margin: 0;
+        background-color: #111; /* dark gaming background */
+        font-family: Arial, sans-serif;
+        overflow-x: hidden; /* hide horizontal scroll */
+    }
+
+    /* CONTAINER FOR CAROUSEL */
+    .carousel-container {
+        width: 100%;               /* full width */
+        height: 50vh;              /* half of the screen height */
+        overflow: hidden;          /* hide overflowing images */
+        position: relative;        /* relative for absolute positioning inside */
+        background-color: #222;    /* dark background for contrast */
+    }
+
+    /* SLIDES WRAPPER */
+    .slides {
+        display: flex;             /* arrange images in a row */
+        width: max-content;        /* width based on total images */
+        animation: scroll 18s linear infinite; /* continuous scroll */
+    }
+
+    /* INDIVIDUAL SLIDES / IMAGES */
+    .slides img {
+        width: 300px;
+        height: 50vh;             /* match container height */
+        object-fit: cover;        /* cover the box nicely */
+        margin-right: 15px;       /* spacing between images */
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        transition: transform 0.3s; /* hover effect */
+    }
+
+    /* HOVER EFFECT: scale up slightly */
+    .slides img:hover {
+        transform: scale(1.1);
+    }
+
+    /* ANIMATION: move slides from right to left */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* adjust later based on images */
+    }
+</style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div class="slides">
+        <img src="poster1.jpg" alt="Game 1">
+        <img src="poster2.jpg" alt="Game 2">
+        <img src="poster3.jpg" alt="Game 3">
+        <img src="poster4.jpg" alt="Game 4">
+        <img src="poster5.jpg" alt="Game 5">
+        <img src="poster6.jpg" alt="Game 6">
+        <!-- Duplicate images for seamless scroll -->
+        <img src="poster1.jpg" alt="Game 1">
+        <img src="poster2.jpg" alt="Game 2">
+        <img src="poster3.jpg" alt="Game 3">
+        <img src="poster4.jpg" alt="Game 4">
+        <img src="poster5.jpg" alt="Game 5">
+        <img src="poster6.jpg" alt="Game 6">
+    </div>
+</div>
+
+</body>
+</html>
